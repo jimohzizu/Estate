@@ -5,7 +5,7 @@ import {useSelector} from 'react-redux'
 
 const Header = () => {
 
-   const {currentUser} = useSelector(state => state.user)
+  const {currentUser} = useSelector ((state) => state.user)
 
   return (
  <header className='bg-blue-200 shadow-md'>

@@ -7,7 +7,7 @@ import OAuth from '../components/OAuth'
 const SignIn = () => {
 
     const [formData, setFormData] = useState()
-    const {loading,error} = useSelector((state) => state.user)
+    const {loading, setLoading} = useSelector((state) => state.user)
     const navigate = useNavigate()
     const dispatch = useDispatch()
   
@@ -62,7 +62,10 @@ const SignIn = () => {
             <span className='text-blue-700'> Sign In</span>
           </Link>
         </div>
-      {error && <p className='text-red-500'>{error}</p>}
+      {/* {error && 
+      <p className='text-red-500'>{error}</p>
+      } */}
+      
       </div>
     )
    }
