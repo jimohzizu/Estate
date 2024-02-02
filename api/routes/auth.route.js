@@ -1,10 +1,11 @@
 import express from 'express'
-import { google, signin,signup} from '../contollers/auth.controller.js'
+import { google, signout, signin,signup} from '../contollers/auth.controller.js'
 
 const router = express.Router()
 
 router.post("/signup", signup)
 router.post("/signin", signin)
 router.post("/google", google)
+router.get("/signout", signout)
 
 export default router
