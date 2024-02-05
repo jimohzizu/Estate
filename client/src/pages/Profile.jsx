@@ -3,6 +3,7 @@ import {useEffect,useRef, useState} from "react"
 import {getDownloadURL, getStorage,ref, uploadBytesResumable} from 'firebase/storage'
 import { updateUserStart,updateUserFailure,updateUserSuccess, deleteUserFailure, deleteUserStart, deleteUserSuccess, signOutUserStart } from "../redux/user/userSlice.js"
 import { app } from "../firebase.js"
+import  {Link} from 'react-router-dom'
 
 const Profile = () => {
  const {currentUser,loading,error} = useSelector ((state) => state.user)
@@ -130,6 +131,7 @@ const dispatch = useDispatch()
       <input type="email" id= "email"   placeholder="email" defaultValue={currentUser.email} className="border p-3 rounded-lg" onChange={handleChange} />
       <input type="password" id= "password" placeholder="password" className="border p-3 rounded-lg" onChange={handleChange} />
       <button disabled={loading} className="bg-slate-700 text-white rounded-lg p-3 uppercase hover:opacity-90 disabled:opacity-80">{ loading ? 'Loading..' : 'Update'}</button>
+      <Link className="bg-green-700 text-white p-3 rounded-lg uppercase text-center hover:opacity-95" to={'/create-listing'}>Create Listing</Link>
       </form>
       <div className="flex justify-between mt-5">
         <span onClick={handleDeleteUser}className="text-red-700 cursor-pointer">Delete Account</span>
