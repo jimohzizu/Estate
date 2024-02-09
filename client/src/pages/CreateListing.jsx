@@ -57,7 +57,7 @@ const CreateListing = () => {
              </div>
             </div>
             <div className="flex flex-col flex-1">
-              <p className="font-semibold ">Images
+              <p className="font-semibold ">Images:
               <span className="font-normal text-gray-600 ml-2">The first image will be the cover(6)</span>
               </p>
               <div className="flex gap-4">
