@@ -2,15 +2,15 @@ import { useSelector, useDispatch } from "react-redux"
 import {useEffect,useRef, useState} from "react"
 import {getDownloadURL, getStorage,ref, uploadBytesResumable} from 'firebase/storage'
 import { updateUserStart,updateUserFailure,updateUserSuccess, deleteUserFailure, deleteUserStart, deleteUserSuccess, signOutUserStart } from "../redux/user/userSlice.js"
-import { app } from "../firebase.js"
-import  {Link} from 'react-router-dom'
+import {app} from "../firebase.js"
+import {Link} from 'react-router-dom'
 
 const Profile = () => {
- const {currentUser,loading,error} = useSelector ((state) => state.user)
- const fileRef = useRef(null)
- const [file, setFile] = useState(undefined)
- const [filePerc, setFilePerc] = useState(0)
- const [fileUploadError, setFileUploadError] = useState(false)
+const {currentUser,loading,error} = useSelector ((state) => state.user)
+const fileRef = useRef(null)
+const [file, setFile] = useState(undefined)
+const [filePerc, setFilePerc] = useState(0)
+const [fileUploadError, setFileUploadError] = useState(false)
 const [formData, setFormData] = useState({})
 const [updateSuccess, setUpdateSuccess] = useState(false)
 
