@@ -5,7 +5,7 @@ import { useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
 
 const CreateListing = () => {
- const{currentUser} = useSelector((state) => state.user)
+const{currentUser} = useSelector((state) => state.user)
 const navigate = useNavigate()
 const [files, setFiles] = useState([])
 const [formData, setFormData] = useState({
@@ -177,7 +177,7 @@ const handleSubmit = async (e) =>{
               <span className="text-xs">($ / month)</span>
               </div>
               </div>
-              {formData.offer &&(
+              {formData.offer && (
 
               <div className="flex items-center gap-2">
               <input type="number" id="discountPrice" min='0' max='1000000' required className="p-3 border border-gray-300 rounded-lg" onChange={handleChange} value={formData.discountPrice}/>
